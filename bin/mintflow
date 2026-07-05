@@ -1,0 +1,48 @@
+#!/bin/bash
+
+VERSION="0.1.0-alpha"
+
+case "$1" in
+    start)
+        ~/MintFlow/bin/mintflow-toggle.sh
+        ;;
+
+    stop)
+        ~/MintFlow/tools/eww/target/release/eww close hub
+        ;;
+
+    restart)
+        ~/MintFlow/tools/eww/target/release/eww reload
+        ;;
+
+    doctor)
+        echo "🌿 MintFlow Doctor"
+        echo
+
+        command -v kitty >/dev/null && echo "✅ Kitty" || echo "❌ Kitty"
+
+        command -v btop >/dev/null && echo "✅ btop" || echo "❌ btop"
+
+        command -v python3 >/dev/null && echo "✅ Python" || echo "❌ Python"
+
+        [ -f ~/MintFlow/tools/eww/target/release/eww ] \
+            && echo "✅ Eww" \
+            || echo "❌ Eww"
+
+        ;;
+
+    version)
+        echo "MintFlow $VERSION"
+        ;;
+
+    *)
+        echo "MintFlow"
+        echo
+        echo "Uso:"
+        echo "  mintflow start"
+        echo "  mintflow stop"
+        echo "  mintflow restart"
+        echo "  mintflow doctor"
+        echo "  mintflow version"
+        ;;
+esac

@@ -1,0 +1,85 @@
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* ==========================
+   Ventana principal
+========================== */
+
+.window {
+    background: rgba(28, 28, 30, 0.82);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+/* ==========================
+   Cabecera
+========================== */
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.title {
+    color: #8FD95A;
+}
+
+.close {
+    color: #e57373;
+}
+
+/* ==========================
+   Secciones
+========================== */
+
+.section {
+    margin-top: 14px;
+    margin-bottom: 6px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #BDBDBD;
+}
+
+.text {
+    margin-left: 6px;
+    margin-top: 4px;
+}
+
+/* ==========================
+   Botones
+========================== */
+
+button {
+
+    background: rgba(255,255,255,.05);
+
+    border-radius: 8px;
+
+    padding: 6px 10px;
+}
+
+button:hover {
+
+    background: rgba(255,255,255,.12);
+}
+
+/* ==========================
+   Consejo
+========================== */
+
+.tip {
+
+    margin-top: 16px;
+
+    padding: 10px;
+
+    background: rgba(255,255,255,.04);
+
+    border-radius: 10px;
+
+    color: #DDDDDD;
+}

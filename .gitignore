@@ -1,0 +1,17 @@
+# Compilación
+target/
+
+# Configuración local
+config/config.json
+*.log
+.cache/
+__pycache__/
+*.pyc
+
+# Dependencias temporales
+tools/
+fuentes/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,96 @@
+(defpoll ram
+  :interval "3s"
+  "~/MintFlow/hub/scripts/ram.sh")
+
+(defpoll cpu
+  :interval "2s"
+  "~/MintFlow/hub/scripts/cpu.sh")
+
+(defpoll disk
+  :interval "20s"
+  "~/MintFlow/hub/scripts/disk.sh")
+
+(defpoll uptime
+  :interval "60s"
+  "~/MintFlow/hub/scripts/uptime.sh")
+
+(defpoll reloj
+  :interval "1s"
+  "~/MintFlow/hub/scripts/time.sh")
+
+(defwindow hub
+  :monitor 0
+  :geometry (geometry
+              :x "10px"
+              :y "42px"
+              :width "360px"
+              :height "470px"
+              :anchor "right center")
+  :stacking "fg"
+  :focusable false
+
+  (box
+    :class "window"
+    :orientation "vertical"
+
+    ;; ==========================
+    ;; CABECERA
+    ;; ==========================
+
+    (box
+      :class "header"
+
+      (label
+        :class "title"
+        :text "MintFlow")
+
+      (button
+  :onclick "~/MintFlow/tools/eww/target/release/eww close hub"
+  "✕")
+    )
+
+    
+
+    ;; ==========================
+    ;; ESTADO
+    ;; ==========================
+
+    (label
+      :class "section"
+      :text "Estado del sistema")
+
+    (label
+      :class "text"
+      :text "CPU   ${cpu}%")
+
+    (label
+      :class "text"
+      :text "RAM   ${ram}%")
+
+    (label
+      :class "text"
+      :text "Disco Duro: ${disk}")
+
+    
+
+    ;; ==========================
+    ;; ACCIONES
+    ;; ==========================
+
+    (label
+      :class "section"
+      :text "Atajos")
+
+    (box
+      :spacing 10
+
+      (button
+        :onclick "kitty btop"
+        "Administrador de tareas")
+
+      (button
+        :onclick "kitty"
+        "CMD")
+    )
+)
+)
