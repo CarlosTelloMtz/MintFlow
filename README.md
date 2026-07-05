@@ -19,3 +19,7 @@ Versión actual
 
 0.1.0-alpha
 Es mi primera haciendo algo así, espero les guste!
+
+
+EDIT: Por problemas de rendimiento y mi inexperiencia el proyecto es abandonado, si alguien lo ve espero me de su opinion y consejos!
+QUizas en un futuro lo continuio...
